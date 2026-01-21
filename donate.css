@@ -1,0 +1,43 @@
+/* Basic hero */
+.donate-hero {
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(3,37,65,0.8), rgba(3,37,65,0.5)), url('images/Sliders/needy.jpg') center/cover no-repeat;
+  color: #fff;
+}
+.donate-hero .overlay { position:absolute; inset:0; }
+
+/* Cards */
+.card { border-radius: 12px; }
+
+/* Small shadow and subtle lift on hover for cards */
+.card:hover { transform: translateY(-4px); transition: transform 220ms ease; box-shadow: 0 16px 40px rgba(5,20,40,0.08); }
+
+/* Preset amount btn active state */
+.preset-amt.active {
+  background: linear-gradient(180deg,#1fa2ff,#0b6fd6);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(11,111,214,0.18);
+}
+
+/* Input focus */
+.form-control:focus, .form-select:focus {
+  border-color: #4c9cff;
+  box-shadow: 0 8px 22px rgba(76,156,255,0.12);
+}
+
+/* Alerts */
+.alert-success { background: #eafcec; color: #064e22; border: 1px solid rgba(6,78,34,0.08); }
+.alert-danger { background: #fff3f3; color: #7a1a1a; border: 1px solid rgba(122,26,26,0.06); }
+
+/* Footer small */
+footer { background: #fbfbfb; }
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+  .donate-hero { min-height: 180px; padding: 40px 0; }
+  .card:hover { transform: none; box-shadow: 0 8px 20px rgba(3,37,65,0.04); }
+}

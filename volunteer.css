@@ -1,0 +1,106 @@
+/* ---------- Background & card ---------- */
+.volunteer-section {
+  position: relative;
+  overflow: hidden;
+  background: #f6f9ff;
+}
+
+.volunteer-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("#");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.55) saturate(0.9);
+  transform: scale(1.03);
+  z-index: 0;
+}
+
+/* Card */
+.volunteer-card {
+  position: relative;
+  z-index: 3;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Right image area inside card (uses same background but clipped) */
+.card-img-right {
+  height: 100%;
+  background-image: url("Screenshot 2025-12-10 150826.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 260px;
+  filter: saturate(0.95);
+}
+
+/* ---------- Modal & wizard visuals ---------- */
+.modal-content {
+  border-radius: 12px;
+}
+
+.wizard-step {
+  transition: transform 350ms ease, opacity 350ms ease;
+}
+
+/* custom select look */
+.custom-select-wrapper .custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+  padding-right: 38px;
+  position: relative;
+}
+
+/* add arrow using pseudo-element on wrapper */
+.custom-select-wrapper {
+  position: relative;
+}
+.custom-select-wrapper::after {
+  content: "\f107";               /* bootstrap-icons caret-down (font) fallback */
+  font-family: "Bootstrap Icons";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 18px;
+  color: #6c757d;
+}
+
+/* Focus styles and input animations */
+input:focus, textarea:focus, select:focus {
+  border-color: #5b8cff;
+  box-shadow: 0 6px 18px rgba(91,140,255,0.15);
+  outline: none;
+  transition: box-shadow 200ms ease;
+}
+
+/* Buttons */
+.btn-primary { background: linear-gradient(180deg,#5ec003,#1f5301); border: none; }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(11,83,179,0.15); }
+
+/* Invalid style for client validation */
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  border-color: #dc3545 !important;
+  box-shadow: none;
+}
+
+/* small screens adjustments */
+@media (max-width: 991px) {
+  .card-img-right { display: none; }
+}
+
+/* subtle entrance animation for the modal body elements */
+.modal-body .wizard-step { opacity: 1; }
+
+/* progress bar */
+.progress { background: rgba(0,0,0,0.05); border-radius: 6px; }
+.progress-bar { background: linear-gradient(90deg,#5ec003,#1f5301); }
+
+/* success alert */
+.alert-success { background: #e9f7ef; color: #0f5132; border: 1px solid rgba(15,81,50,0.08); }
+
+/* error alert */
+.alert-danger { background: #fff4f4; color: #7a1a1a; border: 1px solid rgba(122,26,26,0.08); }
